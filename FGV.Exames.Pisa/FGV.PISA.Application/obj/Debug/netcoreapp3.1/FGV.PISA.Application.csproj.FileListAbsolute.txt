@@ -1,0 +1,9 @@
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Debug\netcoreapp3.1\FGV.PISA.Application.csprojAssemblyReference.cache
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Debug\netcoreapp3.1\FGV.PISA.Application.AssemblyInfoInputs.cache
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Debug\netcoreapp3.1\FGV.PISA.Application.AssemblyInfo.cs
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Debug\netcoreapp3.1\FGV.PISA.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\bin\Debug\netcoreapp3.1\FGV.PISA.Application.deps.json
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\bin\Debug\netcoreapp3.1\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\bin\Debug\netcoreapp3.1\FGV.PISA.Application.pdb
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Debug\netcoreapp3.1\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Debug\netcoreapp3.1\FGV.PISA.Application.pdb

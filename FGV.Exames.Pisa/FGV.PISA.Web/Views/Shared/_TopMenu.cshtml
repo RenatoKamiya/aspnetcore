@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        <div class="logo-mini">
+            <img src="~/assets/pages/img/logos/logo_mini.png" />
+        </div>
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <div class="top-menu">
+            <ul class="nav navbar-nav pull-right">
+                <li class="separator hide"> </li>
+                <li class="dropdown dropdown-user">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <span class="username username-hide-on-mobile">@ViewBag.NomeUsuario</span>
+                        @*<span class="funcao username-hide-on-mobile">@ViewBag.NomeFuncao</span>*@
+                    </a>
+                    @*<ul class="dropdown-menu dropdown-menu-default">
+                        <li>
+                            <a id="alterarSenha">
+                                <i class="icon-key"></i> Alterar Senha
+                            </a>
+                        </li>
+                    </ul>*@
+                </li>
+                <li class="dropdown dropdown-extended quick-sidebar-toggler">
+                    <span class="sr-only">Toggle Quick Sidebar</span>
+                    <i class="icon-logout logout"></i>
+                </li>
+                <!-- END QUICK SIDEBAR TOGGLER -->
+            </ul>
+        </div>
+        <!-- END TOP NAVIGATION MENU -->
+    </div>
+</body>
+</html>

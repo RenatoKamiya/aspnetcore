@@ -1,0 +1,490 @@
+﻿@model FGV.PISA.Web.Models.FiltroConsultarExamesModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="/consultarexames">Dados</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">Upload</span>
+    </li>
+</ul>
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light bordered" id="form_wizard_1">
+            <div class="portlet-title">
+                <div class="caption font-blue">
+                    <i class="icon-pin font-blue"></i>
+                    <span class="caption-subject bold uppercase">Upload de Arquivos</span>
+                </div>
+            </div>
+            <div class="portlet-body form">
+                <div class="form-wizard" id="rootwizard">
+                    <div class="form-body">
+                        <ul class="nav nav-pills nav-justified steps">
+                            <li class="active">
+                                <a href="#tab1" data-toggle="tab" class="step" aria-expanded="true">
+                                    <span class="number"> 1 </span> <br />
+                                    <span class="desc">
+                                        <i class="fa fa-check"></i> Dados do Exame
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab2" data-toggle="tab" class="step">
+                                    <span class="number"> 2 </span> <br />
+                                    <span class="desc">
+                                        <i class="fa fa-check"></i> Escolas
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab3" data-toggle="tab" class="step">
+                                    <span class="number"> 3 </span> <br />
+                                    <span class="desc">
+                                        <i class="fa fa-check"></i> Lista de Presença
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab4" data-toggle="tab" class="step active">
+                                    <span class="number"> 4 </span> <br />
+                                    <span class="desc">
+                                        <i class="fa fa-check"></i> Upload
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="bar" class="progress progress-striped" role="progressbar">
+                            <div class="progress-bar progress-bar-info" style="width: 20%;"> </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <h3 class="block">Dados do Exame</h3>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <div class="col-md-12">
+                                            <div class="form-group form-md-line-input has-info margin-bottom-0">
+                                                <div class="col-md-4 form-group">
+                                                    <div class="form-group form-md-line-input has-info">
+                                                        @Html.DropDownListFor(model => model.IdExame, (SelectList)ViewBag.DropDownExames, "--- SELECIONE ---", new { @class = "form-control", @id = "exemasID" })
+                                                        <label for="form_control">Exame</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="tab2">
+                                <h3 class="block">Escolas</h3>
+                                <div class="row">
+                                    <div class="col-md-4 form-group">
+                                        <div class="form-group form-md-line-input has-info">
+                                            @Html.DropDownListFor(model => model.IdEscola, (SelectList)ViewBag.DropDownEscola, "--- SELECIONE ---", new { @class = "form-control", @id = "IdEscola" })
+                                            <label for="form_control">Escola</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="tab3">
+                                <h3 class="block">Lista Presença</h3>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <table id="example" class="table table-striped" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Nome</th>
+                                                    <th scope="col">Presente</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="corpoListaPresenca">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="tab4">
+                                <h3 class="block col-md-3">Upload</h3>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <input type="hidden" value="@ViewBag.UsuarioId" id="id_usuario" name="Id_Usuario" />
+                                        @Html.Hidden("NomeUsuario", (string)ViewBag.NomeUsuario)
+                                        @Html.Hidden("RFile", (string)ViewBag.RegexFile)
+                                        <div class="portlet-body form">
+                                            <form id="frmBusca" enctype="multipart/form-data">
+                                                @*<div class="row">
+                                                    <div class="col-md-3 form-group">
+                                                    <div class="form-group form-md-line-input has-info">
+                                                    @Html.DropDownListFor(model => model.IdExame, (SelectList)ViewBag.DropDownExames, "--- SELECIONE ---", new { @class = "form-control", @id = "exameId", @name = "ExamesId" })
+                                                    <label for="form_control">Exame - Ano</label>
+                                                    </div>
+                                                    </div>
+                                                    </div>*@
+                                                <div class="row">
+                                                    <div class="col-md-4 form-group">
+                                                        <div class="form-group form-md-line-input has-info">
+                                                            @*@Html.EditorFor(model => model.pastaZip, new { htmlAttributes = new { @class = "form-control text-upper", @id = "pastaZip", @title = "Selecione a pasta que contém os arquivos dos resultados" } })*@
+                                                            <input id="fileselector" type="file" webkitdirectory directory multiple="true" style="display:none" />
+                                                            <label for="form_control">
+                                                                Selecione a pasta que contém os arquivos dos resultados clicando no botão Upload
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 form-group text-right" align="right">
+                                                        <div class="form-group form-md-line-input has-info">
+                                                            <button id="btnUpload" type="button" class="btn blue btn-outline">
+                                                                <i class="fa fa-search"></i>Upload
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 form-group">
+                                                        <div class="form-group form-md-line-input has-info">
+                                                            <label for="form_control" id="caminhoPasta">
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="portlet light bordered">
+                                            <div class="portlet-title">
+                                                <div class="caption font-blue">
+                                                    <i class="icon-pin font-blue"></i>
+                                                    <span class="caption-subject bold uppercase">
+                                                        Lista de arquivos enviados
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="portlet-body">
+                                                <div id="sample_1_wrapper" class="dataTables_wrapper no-footer">
+
+                                                    <div class="table-scrollable">
+                                                        <table class="table table-striped table-bordered table-hover dataTable no-footer" id="tb_Arquivos" role="grid" aria-describedby="sample_1_info" style="position: relative;">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="all"> ID </th>
+                                                                    <th class="all"> Data de Envio</th>
+                                                                    <th class="all"> Usuário </th>
+                                                                    <th class="all"> Arquivo </th>
+                                                                    <th class="all"> Ação </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody></tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="portlet light bordered">
+                                            <div class="portlet-body form">
+                                                @*<div class="col-xs-12 col-md-12  form-group text-right" align="right">*@
+                                                <div class="form-group form-md-line-input has-info">
+                                                    <button type="button" style="float:right; margin-left:10px;" id="btnCancelar" class="btn blue btn-outline">Cancelar </button>
+                                                    @* <div class="tooltip_pisa">
+                                                        <button type="button" style="float:right;margin-left:10px;" id="btnConfirmar" class="btn btn-success">Confirmar</button>
+                                                        <span class="tooltiptext">Selecione o exame e os arquivos à serem enviados.</span>
+                                                        </div>*@
+                                                </div>
+                                                @*</div>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <a href="javascript:;" class="btn default button-previous" style="display: inline-block;">
+                                    <i class="fa fa-angle-left"></i> Voltar
+                                </a>
+                                <a href="javascript:;" class="btn btn-outline blue button-next">
+                                    Continue
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <a class="btn blue button-submit" id="btnConfirmar" style="display: inline-block;" href="javascript:;">
+                                    Salvar
+                                    <i class="fa fa-check"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<div id="overlay">
+    <div class="cv-spinner">
+        <span class="spinner"></span>
+    </div>
+</div>*@
+
+
+
+<script src="~/assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js" type="text/javascript" asp-append-version="true"></script>
+<script src="~/js/moment-with-locales.js"></script>
+<script src="~/js/EnviarExames.js"></script>
+
+@section Scripts {
+    <script>
+        var alunosIds = [];
+        $(document).ready(function () {
+            FormWizard.init();
+            $('#rootwizard').bootstrapWizard();
+        });
+
+        $(document).on('change', '#IdEscola', function (e) {
+            BuscarAlunosPorEscola();
+        });
+
+        function BuscarAlunosPorEscola() {
+            $("#example tr").remove();
+            if ($("#IdEscola").val() === '') {
+                //$("#AlunosList").empty();
+                //$("#AlunosList").append("<option value>" + "---  Selecione ---" + " </option>")
+            } else {
+                $.get("/ConsultarExames/GetAlunosEscolaListaPresenca/", { idEscola: $("#IdEscola").val() }, function (data) {
+                    //$("#AlunosList").empty();
+                    alunosIds = [];
+                    //$("#AlunosList").append("<option value>" + "---  Selecione ---" + " </option>")
+                    $.each(data, function (index, row) {
+                        //$("#corpoListaPresenca").append("<tr><td>" + row.nome + "</td>");
+                        if (row.presente === true) {
+                            $("#corpoListaPresenca").append("<tr><td>" + row.codigoNome + "</td><td><input type='checkbox' id='presente-disable-" + row.id + "' name='Presente-" + row.id + "' checked disabled/></td></tr>");
+
+                        }
+                        else {
+                            alunosIds.push(row.id);
+                            $("#corpoListaPresenca").append("<tr><td>" + row.codigoNome + "</td><td><input type='checkbox' id='presente-" + row.id + "' name='Presente-" + row.id + "'/></td></tr>");
+                        }
+                    });
+                });
+                //$('#example').DataTable();
+            }
+            //else {
+            //    $("#AlunosList").empty();
+            //    $("#AlunosList").append("<option value>" + "---  Selecione ---" + " </option>");
+            //}
+
+        }
+        var FormWizard = function () {
+            return {
+                //main function to initiate the module
+                init: function () {
+                    if (!jQuery().bootstrapWizard) {
+                        return;
+                    }
+
+                    function format(state) {
+                        if (!state.id) return state.text; // optgroup
+                        return "<img class='flag' src='../../assets/global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
+                    }
+
+                    var form = $('#formCheckList');
+                    var error = $('.alert-danger', form);
+                    var success = $('.alert-success', form);
+
+                    var handleTitle = function (tab, navigation, index) {
+                        var total = navigation.find('li').length;
+                        var current = index + 1;
+                        // set wizard title
+                        $('.step-title', $('#form_wizard_1')).text('Step ' + (index + 1) + ' of ' + total);
+                        // set done steps
+                        jQuery('li', $('#form_wizard_1')).removeClass("done");
+                        var li_list = navigation.find('li');
+                        for (var i = 0; i < index; i++) {
+                            jQuery(li_list[i]).addClass("done");
+                        }
+                        if (current === 1) {
+                            $('#form_wizard_1').find('.button-previous').hide();
+                        } else {
+                            $('#form_wizard_1').find('.button-previous').show();
+                        }
+
+                        if (current >= total) {
+                            $('#form_wizard_1').find('.button-next').hide();
+                            $('#btnConfirmar').show();
+                            //displayConfirm();
+                        } else {
+                            $('#form_wizard_1').find('.button-next').show();
+                            $('#btnConfirmar').hide();
+                        }
+                        App.scrollTo($('.page-title'));
+                    };
+
+                    // default form wizard
+                    $('#form_wizard_1').bootstrapWizard({
+                        'nextSelector': '.button-next',
+                        'previousSelector': '.button-previous',
+                        onTabClick: function (tab, navigation, index, clickedIndex) {
+                            return false;
+                            success.hide();
+                            error.hide();
+                            if (form.valid() === false) {
+                                return false;
+                            }
+
+                            handleTitle(tab, navigation, clickedIndex);
+                        },
+                        onNext: function (tab, navigation, index) {
+                            $('#form_wizard_1').find('.button-next').text('Continue');
+                            success.hide();
+                            error.hide();
+                            //if (parseInt(index) === 2) {
+                            //    var dataRecebimentoMinimo = new Date(2020, 11, 1, 0, 0, 0, 0);
+                            //    var date = toDate($("#Data_recebimento").val());
+                            //    if (date === false) {
+                            //        ExibirMensagemErro('Data de recebimento inválida.', '', null);
+                            //        return false;
+                            //    }
+                            //    else if (date < dataRecebimentoMinimo) {
+                            //        ExibirMensagemErro('Data de recebimento inválida.', '', null);
+                            //        return false;
+                            //    }
+
+                            //    if (!ValidarDataRecebimento()) {
+                            //        return false;
+                            //    }
+                            //    else if (!ValidarExisteMalotes()) {
+                            //        ExibirMensagemErro('Obrigatório sinalizar o recebimento de ao menos 1 caixa administrativa.', '', null);
+                            //        return false;
+                            //    }
+                            //}
+                            //else if (parseInt(index) === 3) {
+                            //    if ($("#Periodo_id").val() === '' || $("#Periodo_id").val() === undefined || parseInt($("#Periodo_id").val()) === 0) {
+                            //        ExibirMensagemErro('Obrigatório selecionar o Período.', '', null);
+                            //        return false;
+                            //    }
+                            //    else {
+                            //        if ( parseInt($("#Periodo_id").val()) !== parseInt($("#hdnPeriodoAntigo").val())) {
+                            //            $("#hdnPeriodoAntigo").val($("#Periodo_id").val());
+
+                            //            $.ajax({
+                            //                url: "/CheckListMaterial/GetMateriais?idChecklist=" + $("#Id").val() + "&idPeriodo=" + $("#Periodo_id").val(),
+                            //                dataType: "json",
+                            //                contentType: "application/json",
+                            //                success: function (json) {
+                            //                    var listMateriais = $.parseJSON(JSON.stringify(json));
+
+                            //                    $("#tbQuantidadeMaterial tbody tr").remove();
+                            //                    $("#tbResumoMateriais tbody tr").remove();
+                            //                    if (listMateriais.length > 0) {
+
+                            //                        var tabela = $("#tbQuantidadeMaterial tbody");
+                            //                        var tabelaResumo = $("#tbResumoMateriais tbody");
+
+                            //                        $.each(listMateriais, function (index, material) {
+
+                            //                            var trMaterial = '<tr>';
+                            //                            console.log(material);
+                            //                            trMaterial += '<td>' + material.ordem.toString() + '</td>';
+                            //                            trMaterial += '<td>' + material.nome_material.toString() + '</td>';
+                            //                            trMaterial += '<td>' + material.quantidade_prevista.toString() + '</td>';
+                            //                            trMaterial += '<td class="col-md-1">';
+                            //                            trMaterial += '<input data-val="true" data-val-required="The Id field is required." id="Materiais_' + index.toString() + '__Id" name="Materiais[' + index.toString() + '].Id" value="' + material.id.toString() + '" type="hidden">';
+                            //                            trMaterial += '<input data-val="true" data-val-required="The Checklist_id field is required." id="Materiais_' + index.toString() + '__Checklist_id" name="Materiais[' + index.toString() + '].Checklist_id" value="' + material.checklist_id.toString() + '" type="hidden">';
+                            //                            trMaterial += '<input data-val="true" data-val-required="The Material_id field is required." id="Materiais_' + index.toString() + '__Material_id" name="Materiais[' + index.toString() + '].Material_id" value="' + material.material_id.toString() + '" type="hidden">';
+                            //                            trMaterial += '<input data-val="true" data-val-required="The Ordem field is required." id="Materiais_' + index.toString() + '__Ordem" name="Materiais[1].Ordem" value="' + material.ordem.toString() + '" type="hidden">';
+                            //                            trMaterial += '<input data-val="true" data-val-required="The Periodo_exame_id field is required." id="Materiais_' + index.toString() + '__Periodo_exame_id" name="Materiais[' + index.toString() + '].Periodo_exame_id" value="' + material.periodo_exame_id.toString() + '" type="hidden">';
+                            //                            trMaterial += '<input data-val="true" data-val-required="The Quantidade_prevista field is required." id="Materiais_' + index.toString() + '__Quantidade_prevista" name="Materiais[' + index.toString() + '].Quantidade_prevista" value="' + material.quantidade_prevista.toString() + '" type="hidden">';
+                            //                            trMaterial += '<input class="form-control numericOnly txtQuantidadeReal" data="' + material.id.toString() + '" data-val="true" data-val-required="The Quantidade_real field is required." id="Materiais_' + index.toString() + '__Quantidade_real" maxlength="4" name="Materiais[' + index.toString() + '].Quantidade_real" value="' + material.quantidade_real.toString() + '" type="text">';
+                            //                            trMaterial += '</td>';
+                            //                            trMaterial += '</tr >';
+                            //                            tabela.append(trMaterial);
+
+                            //                            var trResumo = '<tr>';
+
+                            //                            trResumo += '<td>' + material.ordem.toString() + '</td>';
+                            //                            trResumo += '<td>' + material.nome_material.toString() + '</td>';
+                            //                            trResumo += '<td>' + material.quantidade_prevista.toString() + '</td>';
+                            //                            trResumo += '<td class="col-md-1" id="tdResumo_' + material.id.toString() + '">';
+                            //                            trResumo += material.quantidade_real.toString();
+                            //                            trResumo += '</td>'
+                            //                            trResumo += '</tr >';
+                            //                            tabelaResumo.append(trResumo);
+
+                            //                        });
+                            //                    }
+                            //                },
+                            //                error: function () {
+                            //                    //any error to be handled
+                            //                }
+                            //            });
+                            //        }
+                            //    }
+                            //}
+                            //else if (parseInt(index) === 4) {
+                            //    var preencheuTodos = true;
+
+                            //    $(".txtQuantidadeReal").each(function (index, txt) {
+                            //        var txtJquery = $(txt);
+                            //        if (txtJquery.val() === '' || txtJquery.val() === undefined /*|| parseInt(txtJquery.val()) === 0*/) {
+                            //            ExibirMensagemErro('Existe um ou mais campos em branco, favor verificar novamente. Caso não exista quantidade para o material, digite o valor 0(zero) no campo.', '', null);
+                            //            preencheuTodos = false;
+                            //            return false;
+                            //        }
+                            //        else {
+                            //            var quantidadePrevista = parseInt($('#Materiais_' + index.toString() + '__Quantidade_prevista').val());
+                            //            if (quantidadePrevista !== parseInt(txtJquery.val()) && $("#hdnQuantidadeValidada").val() === 'False') {
+                            //                ExibirAlertaDivergencia();
+                            //                preencheuTodos = false;
+                            //                return false;
+                            //            }
+                            //            else {
+                            //                $("#tdResumo_" + txtJquery.attr('data')).text(txtJquery.val());
+                            //            }
+                            //        }
+                            //    });
+                            //    if (!preencheuTodos) {
+                            //        return false;
+                            //    }
+                            //}
+                            handleTitle(tab, navigation, index);
+                        },
+                        onPrevious: function (tab, navigation, index) {
+                            success.hide();
+                            error.hide();
+                            handleTitle(tab, navigation, index);
+                        },
+                        onTabShow: function (tab, navigation, index) {
+                            var total = navigation.find('li').length;
+                            var current = index + 1;
+                            var $percent = (current / total) * 100;
+                            $('#form_wizard_1').find('.progress-bar').css({
+                                width: $percent + '%'
+                            });
+                        }
+                    });
+
+                    $('#form_wizard_1').find('.button-previous').hide();
+                    $('#form_wizard_1 .button-submit').hide();
+
+                }
+
+            };
+
+        }();
+    </script>
+}

@@ -1,0 +1,45 @@
+﻿@{
+    List<MenuViewModel> Menus = new List<MenuViewModel>();
+    Menus = @ViewBag.Menus != null ? @ViewBag.Menus : Menus;
+}
+
+<div class="page-sidebar-wrapper">
+
+    <div class="page-sidebar navbar-collapse collapse">
+        <ul class="page-sidebar-menu" data-keep-expanded="true" data-auto-scroll="true" data-slide-speed="200">
+            <li class="nav-item">
+                <a href="~/Home" class="nav-link nav-toggle">
+                    <i class="icon-home"></i>
+                    <span class="title">Início</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
+
+            @if (Menus.Count > 0)
+            {
+                foreach (var itemMenu in Menus)
+                {
+                    bool isRoot = (itemMenu.Pai_id == 0) ? true : false;
+                    if (isRoot)
+                    {
+                        <li class="heading">
+                            <h3 class="uppercase">@itemMenu.NomeExibicao</h3>
+                        </li>
+                    }
+                    else
+                    {
+                        var controller = (itemMenu.EstaVigente) ? itemMenu.Controller : "Menu";
+                        var action = (itemMenu.EstaVigente) ? itemMenu.Action : "Index";
+
+                        <li class="nav-item">
+                            <a href="@Url.Action(action, controller)" class="nav-link">
+                                <i class="@itemMenu.Icone"></i>
+                                <span class="title">@itemMenu.NomeExibicao</span>
+                            </a>
+                        </li>
+                    }
+                }
+            }
+        </ul>
+    </div>
+</div>

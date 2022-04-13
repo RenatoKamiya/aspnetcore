@@ -1,0 +1,174 @@
+﻿@model FGV.PISA.Web.Models.UsuarioModel
+
+@{ Layout = null;}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="pt-br">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Sistema de Upload de Resultados - PISA</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Sistema de Upload de Resultados - PISA" name="description" />
+    <meta content="" name="author" />
+    <meta name="google" content="notranslate">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177228276-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177228276-1');
+    </script>
+
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    @*<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />*@
+
+    <link href="~/css/fonts-googleapis.css" rel="stylesheet" />
+    <link href="~/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="~/assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="~/assets/global/css/components-rounded.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="~/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="~/assets/pages/css/login-5.min.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL STYLES -->
+    <link href="~/assets/global/plugins/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <!-- END THEME LAYOUT STYLES -->
+    <link href="~/css/videologin.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/favicon.ico" />
+</head>
+<!-- END HEAD -->
+<body class="login notranslate">
+    <!-- BEGIN : LOGIN PAGE 5-2 -->
+    <div class="user-login-5">
+        <div class="row bs-reset">
+            <div class="col-md-6 login-container bs-reset">
+                <div class="login-content" style="margin-top:150px !important;">
+                    <h1>Sistema de Upload de Resultados</h1>
+                    <p style="margin:0;">  </p>
+                    @using (Html.BeginForm(FormMethod.Post, new { id = "frm_login", @class = "login-form", @style = "margin-top: 30px;" }))
+                    {
+
+
+
+                        <p class="text-danger"> <span style="color:red">@ViewBag.ErrorLogin</span></p>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @class = "form-control form-control-solid placeholder-no-fix form-group text-box single-line", type = "text", autocomplete = "off", placeholder = "CPF", required = "required", @id = "txt_cpf" } })
+                                @Html.ValidationMessageFor(model => model.Cpf, "", new { @class = "field-validation-valid text-danger" })
+                            </div>
+                            <div class="col-xs-6">
+                                @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control form-control-solid placeholder-no-fix form-group text-box single-line password", type = "password", autocomplete = "off", placeholder = "Senha", required = "required" } })
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 text-right">
+                                @*<div class="forgot-password">
+                                    <a href="javascript:;" id="forget-password" class="forget-password">Esqueceu a senha?</a>
+                                </div>*@
+                                <input class="btn blue" type="submit" value="Entrar" />
+                            </div>
+                        </div>
+                        <div class="alert alert-danger display-hide">
+                            <button class="close" data-close="alert"></button>
+                            <span>Digite Login e Senha. </span>
+                        </div>
+                    }
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <p class="text-info" style="font-size:11px;">
+                                Para melhor funcionamento da plataforma de Exames PISA recomenda-se o uso do browser Chrome.
+                                Para instalação, acesse <a target="_blank" href="https://www.google.com/intl/pt-BR/chrome/">aqui</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BEGIN FORGOT PASSWORD FORM -->
+                    <form class="forget-form" action="javascript:;" method="post">
+                        <h3>Esqueceu a senha ?</h3>
+                        <p> Digite seu CPF para validar sua conta. </p>
+                        <div class="form-group">
+                            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="CPF" name="" id="txt_cpf_validate" />
+                            <br>
+                            <span id="span_message_recovery_password" />
+                        </div>
+                        <div class="col-sm-12 text-right">
+                            <div type="button" class="btn blue btn-outline" id="back-btn">Voltar</div>
+                            <button type="button" class="btn blue" id="btn_valida_cpf">Validar CPF</button>
+                            <button type="button" class="btn blue" id="btn_atualiza_email" style="display:none">Atualizar E-mail</button>
+                            <button type="button" class="btn blue" id="btn_valida_dada_user" style="display:none">Validar Dados</button>
+                            <button type="button" class="btn blue" id="btn_salvar_new_email" style="display:none">Salvar Novo E-mail</button>
+                            <button type="button" class="btn blue" id="btn_recuperar_senha" style="display:none">Redefinir Senha</button>
+                        </div>
+                    </form>
+                    <!-- END FORGOT PASSWORD FORM -->
+
+                </div>
+               
+                <partial name="_Footer" />
+            </div>
+            <div class="col-md-6 bs-reset" style="overflow: hidden;height:100vh;">
+                
+                <div class="" style="z-index: 0;margin: 0;position: absolute;top: 50%;-ms-transform: translateY(-80%);transform: translateY(-80%);">
+                    <img src="~/assets/pages/img/logos/Logo_pisa.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <partial name="_InfoHelp" />
+   
+    <!-- /.modal-dialog -->
+    <!-- END : LOGIN PAGE 5-2 -->
+    <!--[if lt IE 9]>
+    <script src = "~/assets/global/plugins/respond.min.js" ></ script >
+    < script src="~/assets/global/plugins/excanvas.min.js"></script>
+    <script src = "~/assets/global/plugins/ie8.fix.min.js" ></ script >
+    < ![endif]-- >
+
+    < !--BEGIN CORE PLUGINS -->
+    <script src="~/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="~/assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="~/assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/bootstrap-sweetalert/sweetalert.js" type="text/javascript"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="~/assets/pages/scripts/login-5.min.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+<script src="~/js/jquery.mask.js"></script>
+<script src="~/js/Login.js"></script>

@@ -1,0 +1,38 @@
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\bin\Debug\net5.0\FGV.PISA.CrossCutting.Common.deps.json
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\bin\Debug\net5.0\FGV.PISA.CrossCutting.Common.dll
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\bin\Debug\net5.0\ref\FGV.PISA.CrossCutting.Common.dll
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\bin\Debug\net5.0\FGV.PISA.CrossCutting.Common.pdb
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.AssemblyInfoInputs.cache
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.AssemblyInfo.cs
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.csproj.CoreCompileInputs.cache
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.dll
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\ref\FGV.PISA.CrossCutting.Common.dll
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.pdb
+C:\Projetos\FGV\Repos\PISA\Exames%20%E2%80%93%20Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.dll
+C:\Projetos\FGV\Repos\PISA\Exames%20%E2%80%93%20Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\ref\FGV.PISA.CrossCutting.Common.dll
+C:\Projetos\FGV\Repos\PISA\Exames%20%E2%80%93%20Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.pdb
+C:\Projetos\FGV\Repos\PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.csprojAssemblyReference.cache
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\bin\Debug\net5.0\FGV.PISA.CrossCutting.Common.deps.json
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\bin\Debug\net5.0\FGV.PISA.CrossCutting.Common.dll
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\bin\Debug\net5.0\ref\FGV.PISA.CrossCutting.Common.dll
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\bin\Debug\net5.0\FGV.PISA.CrossCutting.Common.pdb
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.csproj.AssemblyReference.cache
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.AssemblyInfoInputs.cache
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.AssemblyInfo.cs
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.csproj.CoreCompileInputs.cache
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.dll
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\ref\FGV.PISA.CrossCutting.Common.dll
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.pdb
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\bin\Debug\net5.0\FGV.PISA.CrossCutting.Common.deps.json
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\bin\Debug\net5.0\FGV.PISA.CrossCutting.Common.dll
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\bin\Debug\net5.0\ref\FGV.PISA.CrossCutting.Common.dll
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\bin\Debug\net5.0\FGV.PISA.CrossCutting.Common.pdb
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.AssemblyInfoInputs.cache
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.AssemblyInfo.cs
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.csproj.CoreCompileInputs.cache
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.dll
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\ref\FGV.PISA.CrossCutting.Common.dll
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.Pisa.CrossCutting\obj\Debug\net5.0\FGV.PISA.CrossCutting.Common.pdb

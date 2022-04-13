@@ -1,0 +1,136 @@
+﻿@model FGV.PISA.Web.Models.FiltroConsultarExamesModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link href="~/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+<link href="~/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="~/css/site.min.css" rel="stylesheet" type="text/css" />
+<!-- BEGIN PAGE HEAD-->
+<div class="page-head">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+        <h1>
+            Resultados enviados
+            <small>Pesquisar os resultados enviados</small>
+        </h1>
+    </div>
+    <!-- END PAGE TITLE -->
+
+</div>
+<!-- END PAGE HEAD-->
+<!-- BEGIN PAGE BREADCRUMB -->
+<ul class="page-breadcrumb breadcrumb">
+    <li>
+        <a href="Home">Início</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <span class="active">Pesquisar resultados enviados</span>
+    </li>
+</ul>
+<!-- END PAGE BREADCRUMB -->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-blue">
+                    <i class="icon-pin font-blue"></i>
+                    <span class="caption-subject bold uppercase">Busca</span>
+                </div>
+            </div>
+            <div class="portlet-body form">
+                <form id="frmBusca">
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <div class="form-group form-md-line-input has-info">
+                                @Html.DropDownListFor(model => model.IdExame, (SelectList)ViewBag.DropDownExames, "--- SELECIONE ---", new { @class = "form-control", @id = "exemasID" })
+                                <label for="form_control">Exame</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 form-group">
+                            <div class="form-group form-md-line-input has-info">
+                                @Html.TextBoxFor(model => model.DataInicial, new { @class = "form-control", @id = "txt_DataInicial", @maxlength = "10" })
+                                <label for="form_control">Data Inicial</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <div class="form-group form-md-line-input has-info">
+                                @Html.TextBoxFor(model => model.DataFinal, new { @class = "form-control", @id = "txt_DataFinal", @maxlength = "10" })
+                                <label for="form_control">Data Final</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <div class="form-group form-md-line-input has-info">
+                                @Html.DropDownListFor(model => model.IdEscola, (SelectList)ViewBag.DropDownEscola, "--- SELECIONE ---", new { @class = "form-control", @id = "IdEscola" })
+                                <label for="form_control">Escola</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <div class="form-group form-md-line-input has-info">
+                                @Html.DropDownListFor(model => model.IdAluno, (SelectList)ViewBag.DropDownAlunos, "--- SELECIONE ---", new { @class = "form-control", @id = "AlunosList" })
+                                <label for="form_control">Aluno</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 form-group text-right" align="right">
+                            <div class="form-group form-md-line-input has-info">
+                                <button id="btnBuscar" type="button" class="btn blue btn-outline">
+                                    <i class="fa fa-search"></i> Buscar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-blue">
+                    <i class="icon-pin font-blue"></i>
+                    <span class="caption-subject bold uppercase">Lista de resultados enviados</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="sample_1_wrapper" class="dataTables_wrapper no-footer">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="dt-buttons">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-scrollable">
+                        <table class="table table-striped table-bordered table-hover dataTable no-footer" id="tb_resultado" role="grid" aria-describedby="sample_1_info" style="position: relative;">
+                            <thead>
+                                <tr>
+                                    <th class="all"> ID </th>
+                                    <th class="all"> Aluno </th>
+                                    <th class="all"> Escola </th>
+                                    <th class="all"> Data do envio </th>
+                                    <th class="all"> Usuário </th>
+                                    <th class="all"> Arquivo </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .dt-buttons {
+        margin-top: 1px !important
+    }
+</style>
+<script src="~/js/moment-with-locales.js"></script>
+<script src="~/js/ConsultarExames.js"></script> 

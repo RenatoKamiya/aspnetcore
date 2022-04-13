@@ -1,0 +1,48 @@
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.deps.json
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\bin\Release\net5.0\ref\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.pdb
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.csprojAssemblyReference.cache
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.AssemblyInfoInputs.cache
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.AssemblyInfo.cs
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Release\net5.0\ref\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.pdb
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.deps.json
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\bin\Release\net5.0\ref\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.pdb
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.csprojAssemblyReference.cache
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.AssemblyInfoInputs.cache
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.AssemblyInfo.cs
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\obj\Release\net5.0\ref\FGV.PISA.Application.dll
+C:\Projetos\FGV\Repos\ExamesPisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.pdb
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.deps.json
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.dll
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\bin\Release\net5.0\ref\FGV.PISA.Application.dll
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.pdb
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.csproj.AssemblyReference.cache
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.AssemblyInfoInputs.cache
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.AssemblyInfo.cs
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.csproj.CoreCompileInputs.cache
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.dll
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\obj\Release\net5.0\ref\FGV.PISA.Application.dll
+C:\Users\yansa\Projetos\FGV\Exames.PISA\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.pdb
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.deps.json
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.dll
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\bin\Release\net5.0\ref\FGV.PISA.Application.dll
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\bin\Release\net5.0\FGV.PISA.Application.pdb
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.AssemblyInfoInputs.cache
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.AssemblyInfo.cs
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.csproj.CoreCompileInputs.cache
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.dll
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\obj\Release\net5.0\ref\FGV.PISA.Application.dll
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.pdb
+D:\2.0 Ness\201_Redacoes_Portal\src\FGV.Exames.Pisa\FGV.PISA.Application\obj\Release\net5.0\FGV.PISA.Application.csproj.AssemblyReference.cache
